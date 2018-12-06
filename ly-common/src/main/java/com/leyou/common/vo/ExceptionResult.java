@@ -4,7 +4,7 @@ import com.leyou.common.enums.ExceptionEnum;
 import lombok.Data;
 
 /**
- * @description 自定义异常返回信息
+ * @description 自定义异常返回实体
  */
 @Data
 public class ExceptionResult {
@@ -13,8 +13,8 @@ public class ExceptionResult {
     private long timestamp;
 
     public ExceptionResult(ExceptionEnum em) {
-        this.status = em.getCode();
-        this.message = em.getMsg();
-        this.timestamp = System.currentTimeMillis();
+        this.status = em.getCode();                     // 状态码
+        this.message = em.getMsg();                     // 异常信息
+        this.timestamp = System.currentTimeMillis();    // 当前时间
     }
 }

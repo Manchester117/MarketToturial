@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 /**
- * @description 通用异常处理的Controller拦截
+ * @description 通用异常拦截
  */
 @ControllerAdvice
 public class CommonExceptionHandler {
