@@ -3,6 +3,9 @@ package com.leyou.common.vo;
 import com.leyou.common.enums.ExceptionEnum;
 import lombok.Data;
 
+/**
+ * @description 自定义异常返回信息
+ */
 @Data
 public class ExceptionResult {
     private int status;

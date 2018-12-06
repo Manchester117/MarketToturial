@@ -13,7 +13,11 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class CommonExceptionHandler {
     @ExceptionHandler(LyException.class)           // 可以通过使用注解的参数来拦截不同的异常
     public ResponseEntity<ExceptionResult> handlerException(LyException e) {
-        return ResponseEntity.status(e.getExceptionEnum().getCode())
-                .body(new ExceptionResult(e.getExceptionEnum()));
+        // 拿到异常状态码
+        int exceptionCode = e.getExceptionEnum().getCode();
+        // 封装异常实体
+        ExceptionResult exceptionResult = new ExceptionResult(e.getExceptionEnum());
+        // 返回响应实体的状态码 + 异常信息
+        return ResponseEntity.status(exceptionCode).body(exceptionResult);
     }
 }
