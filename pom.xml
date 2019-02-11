@@ -40,7 +40,7 @@
 
     <dependencyManagement>
         <dependencies>
-            <!-- springCloud -->
+            <!-- SpringCloud -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
