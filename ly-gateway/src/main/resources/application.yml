@@ -15,7 +15,11 @@ eureka:
 zuul:
   prefix: /api                            # 添加路由前缀
   routes:
-    item-service: /item/**                # 所有前端请求都增加一个'/item'路径
+    item-service: /item/**                # 在网关中配置所有关于商品服务的路径前增加'/item'
+    upload-service:                       # 在网关中配置所有关于上传的路径前增加'/upload',需要对路径进行特殊设置
+      path: /upload/**
+      serviceId: upload-service
+      strip-prefix: false
 hystrix:
   command:
     default:
