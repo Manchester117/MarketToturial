@@ -17,8 +17,8 @@ eureka:
     prefer-ip-address: true
 # FastDFS配置
 fdfs:
-  so-timeout: 2500
-  connect-timeout: 600
+  so-timeout: 5000
+  connect-timeout: 2500
   thumb-image:  # 缩略图
     width: 60
     height: 60
